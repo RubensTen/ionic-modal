@@ -1,0 +1,11 @@
+<ion-view view-title="Conversación">
+  <ion-content>
+    <h3>Conversación {{conversacion.id}} | {{conversacion.titulo}}</h3>
+    <ion-list>
+      <ion-item ng-repeat="mensaje in conversacion.texto">
+        <span ng-if="mensaje.visitante">Arturo dice:</span>
+        <span ng-if="!mensaje.visitante">Agente dice:</span>
+         {{mensaje.msg}}
+      </ion-item>
+  </ion-content>
+</ion-view>
